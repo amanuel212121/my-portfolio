@@ -35,6 +35,7 @@ export default function Hero() {
       id="home"
       className="relative flex min-h-screen items-center overflow-hidden px-6 pb-20 pt-28 sm:px-8 lg:px-12"
     >
+      {/* Background */}
       <div className="pointer-events-none absolute inset-0 -z-20 overflow-hidden">
         <div className="absolute left-1/2 top-1/2 h-[700px] w-[700px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-purple-600/10 blur-[160px]" />
 
@@ -88,12 +89,15 @@ export default function Hero() {
       </div>
 
       <div className="mx-auto grid w-full max-w-7xl items-center gap-14 lg:grid-cols-[1.15fr_0.85fr]">
+
+        {/* LEFT SIDE */}
         <div>
+          {/* Availability */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="mb-7 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-sm text-slate-300 shadow-lg shadow-purple-950/10 backdrop-blur-xl"
+            className="mb-7 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-sm text-slate-300 shadow-lg backdrop-blur-xl"
           >
             <span className="relative flex h-2.5 w-2.5">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-60" />
@@ -103,6 +107,7 @@ export default function Hero() {
             Available for opportunities
           </motion.div>
 
+          {/* Heading */}
           <motion.h1
             initial={{ opacity: 0, y: 35 }}
             animate={{ opacity: 1, y: 0 }}
@@ -115,6 +120,7 @@ export default function Hero() {
             </span>
           </motion.h1>
 
+          {/* Role */}
           <motion.div
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
@@ -135,11 +141,10 @@ export default function Hero() {
               {roles[0]}
             </motion.span>
 
-            <span className="ml-1 animate-pulse text-purple-400">
-              _
-            </span>
+            <span className="ml-1 animate-pulse text-purple-400">_</span>
           </motion.div>
 
+          {/* Tagline */}
           <motion.p
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
@@ -149,6 +154,7 @@ export default function Hero() {
             {profile.tagline}
           </motion.p>
 
+          {/* Location */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -159,6 +165,7 @@ export default function Hero() {
             <span>{profile.location}</span>
           </motion.div>
 
+          {/* Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
@@ -171,6 +178,7 @@ export default function Hero() {
               className="group inline-flex items-center gap-2 rounded-2xl bg-gradient-to-r from-blue-600 via-purple-600 to-fuchsia-600 px-6 py-3.5 font-semibold text-white shadow-xl shadow-purple-600/20 transition duration-300 hover:-translate-y-1 hover:shadow-purple-500/40"
             >
               View Projects
+
               <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
             </Link>
 
@@ -180,6 +188,7 @@ export default function Hero() {
               className="group inline-flex items-center gap-2 rounded-2xl border border-white/10 bg-white/[0.05] px-6 py-3.5 font-semibold text-white backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:bg-white/10"
             >
               Download CV
+
               <Download className="h-5 w-5 transition-transform duration-300 group-hover:translate-y-1" />
             </a>
 
@@ -189,11 +198,12 @@ export default function Hero() {
               rel="noopener noreferrer"
               className="group inline-flex items-center gap-2 rounded-2xl border border-white/10 bg-white/[0.05] px-6 py-3.5 font-semibold text-white backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:bg-white/10"
             >
-              <span className="text-lg font-bold">GH</span>
+              <span className="text-lg">⌘</span>
               GitHub
             </a>
           </motion.div>
 
+          {/* Scroll */}
           <motion.a
             href="#about"
             animate={{ y: [0, 8, 0] }}
@@ -209,23 +219,14 @@ export default function Hero() {
           </motion.a>
         </div>
 
+        {/* RIGHT SIDE - PROFILE IMAGE */}
         <motion.div
-          initial={{
-            opacity: 0,
-            scale: 0.85,
-            x: 40,
-          }}
-          animate={{
-            opacity: 1,
-            scale: 1,
-            x: 0,
-          }}
-          transition={{
-            duration: 1,
-            delay: 0.25,
-          }}
+          initial={{ opacity: 0, scale: 0.85, x: 40 }}
+          animate={{ opacity: 1, scale: 1, x: 0 }}
+          transition={{ duration: 1, delay: 0.25 }}
           className="relative mx-auto w-full max-w-md"
         >
+          {/* Glow */}
           <motion.div
             className="absolute inset-8 rounded-full bg-gradient-to-r from-blue-500/30 via-purple-500/30 to-fuchsia-500/30 blur-3xl"
             animate={{
@@ -239,11 +240,10 @@ export default function Hero() {
             }}
           />
 
+          {/* Ring */}
           <motion.div
             className="relative mx-auto flex aspect-square w-[280px] items-center justify-center rounded-full border border-white/10 bg-white/[0.03] p-3 shadow-2xl shadow-purple-950/40 backdrop-blur-xl sm:w-[340px]"
-            animate={{
-              rotate: [0, 360],
-            }}
+            animate={{ rotate: [0, 360] }}
             transition={{
               duration: 30,
               repeat: Infinity,
@@ -252,9 +252,10 @@ export default function Hero() {
           >
             <div className="absolute inset-2 rounded-full border border-dashed border-purple-400/20" />
 
+            {/* REAL PROFILE IMAGE */}
             <div className="relative h-full w-full overflow-hidden rounded-full border-2 border-purple-400/30 bg-slate-900">
               <Image
-                src="/profile.jpg"
+                src="/my-portfolio/profile.jpg"
                 alt="Gibeamanuel Hibstu"
                 fill
                 priority
@@ -266,6 +267,7 @@ export default function Hero() {
             </div>
           </motion.div>
 
+          {/* Quote */}
           <motion.div
             className="absolute -bottom-3 left-1/2 -translate-x-1/2 rounded-2xl border border-white/10 bg-slate-950/70 px-5 py-3 shadow-xl backdrop-blur-xl"
             animate={{ y: [0, -8, 0] }}

@@ -172,6 +172,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.5 }}
             className="mt-9 flex flex-wrap gap-4"
           >
+            {/* Projects */}
             <Link
               href="#projects"
               prefetch={false}
@@ -182,9 +183,10 @@ export default function Hero() {
               <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
             </Link>
 
+            {/* Download CV */}
             <a
-              href="/my-portfolio/cv.pdf"
-              download
+              href="/my-portfolio/Gibeamanuel_Hibstu_CV_Updated.pdf"
+              download="Gibeamanuel_Hibstu_CV.pdf"
               className="group inline-flex items-center gap-2 rounded-2xl border border-white/10 bg-white/[0.05] px-6 py-3.5 font-semibold text-white backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:bg-white/10"
             >
               Download CV
@@ -192,6 +194,7 @@ export default function Hero() {
               <Download className="h-5 w-5 transition-transform duration-300 group-hover:translate-y-1" />
             </a>
 
+            {/* GitHub */}
             <a
               href={profile.github}
               target="_blank"
@@ -215,6 +218,7 @@ export default function Hero() {
             className="mt-14 inline-flex items-center gap-2 text-sm text-slate-500 transition hover:text-white"
           >
             Scroll to explore
+
             <ArrowDown className="h-4 w-4" />
           </motion.a>
         </div>
@@ -252,7 +256,7 @@ export default function Hero() {
           >
             <div className="absolute inset-2 rounded-full border border-dashed border-purple-400/20" />
 
-            {/* REAL PROFILE IMAGE */}
+            {/* Profile Image */}
             <div className="relative h-full w-full overflow-hidden rounded-full border-2 border-purple-400/30 bg-slate-900">
               <Image
                 src="/my-portfolio/profile.jpg"

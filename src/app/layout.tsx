@@ -3,9 +3,50 @@ import "./globals.css";
 import Providers from "./providers";
 
 export const metadata: Metadata = {
-  title: "Gibeamanuel Hibstu | Full-Stack Developer",
+  title: "Gibeamanuel Hibstu | Software Engineering & Management Student",
   description:
-    "Portfolio of Gibeamanuel Hibstu, Software Engineering Student and Full-Stack Developer from Bahir Dar, Ethiopia.",
+    "Gibeamanuel Hibstu is a 4th-year Software Engineering student at Woldia University and a 4th-year Management student at Adago College, focused on full-stack development, modern web applications, and practical digital solutions.",
+  keywords: [
+    "Gibeamanuel Hibstu",
+    "Software Engineering Student",
+    "Management Student",
+    "Full-Stack Developer",
+    "Software Engineer",
+    "Woldia University",
+    "Adago College",
+    "React",
+    "Next.js",
+    "TypeScript",
+    "Laravel",
+    "PHP",
+    "MySQL",
+    "Portfolio",
+  ],
+  authors: [{ name: "Gibeamanuel Hibstu" }],
+  creator: "Gibeamanuel Hibstu",
+  metadataBase: new URL("https://amanuel212121.github.io"),
+  alternates: {
+    canonical: "/my-portfolio/",
+  },
+  openGraph: {
+    title: "Gibeamanuel Hibstu | Software Engineering & Management Student",
+    description:
+      "4th-year Software Engineering student at Woldia University and 4th-year Management student at Adago College | Full-Stack Developer.",
+    url: "https://amanuel212121.github.io/my-portfolio/",
+    siteName: "Gibeamanuel Hibstu Portfolio",
+    type: "website",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Gibeamanuel Hibstu | Software Engineering & Management Student",
+    description:
+      "Software Engineering & Management student and Full-Stack Developer from Ethiopia.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
@@ -15,18 +56,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
-        <title>{typeof metadata.title === 'string' ? metadata.title : "Gibeamanuel Hibstu | Full-Stack Developer"}</title>
-        <meta name="description" content={typeof metadata.description === 'string' ? metadata.description : "Portfolio of Gibeamanuel Hibstu, Software Engineering Student and Full-Stack Developer from Bahir Dar, Ethiopia."} />
-        <meta name="keywords" content="Full-Stack Developer, Software Engineer, Portfolio, React, Next.js, TypeScript" />
-        <meta name="author" content="Gibeamanuel Hibstu" />
-        <meta property="og:title" content="Gibeamanuel Hibstu | Full-Stack Developer" />
-        <meta property="og:description" content="Portfolio of Gibeamanuel Hibstu, Software Engineering Student and Full-Stack Developer from Bahir Dar, Ethiopia." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://your-domain.com" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="robots" content="index, follow" />
-      </head>
       <body className="bg-gray-900 text-gray-100">
         <Providers>{children}</Providers>
       </body>

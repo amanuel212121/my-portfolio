@@ -14,7 +14,7 @@ import {
 
 const stats = [
   {
-    value: "3rd",
+    value: '4th',
     label: "Year Student",
     icon: GraduationCap,
   },
@@ -126,7 +126,7 @@ export default function About() {
                 <p>
                   I am a passionate{" "}
                   <span className="font-semibold text-white">
-                    Software Engineering student
+                    Software Engineering & Management Student
                   </span>{" "}
                   and aspiring Full-Stack Developer focused on building
                   modern, scalable, secure, and user-friendly web applications.

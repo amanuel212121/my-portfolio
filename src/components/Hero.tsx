@@ -12,7 +12,7 @@ import Link from "next/link";
 import { profile } from "@/data/profile";
 
 const roles = [
-  "Software Engineering Student",
+  "Software Engineering & Management Student",
   "Full-Stack Developer",
   "Problem Solver",
   "Web Application Developer",

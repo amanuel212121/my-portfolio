@@ -26,46 +26,54 @@ export default function Education() {
           </h2>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, x: -30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          className="relative"
-        >
+        <div className="relative">
           <div className="absolute left-6 top-0 h-full w-px bg-gradient-to-b from-blue-500 via-purple-500 to-transparent" />
 
-          <div className="relative pl-16">
-            <div className="absolute left-0 top-1 flex h-12 w-12 items-center justify-center rounded-full border border-purple-400/30 bg-purple-500/10">
-              <GraduationCap className="h-6 w-6 text-purple-400" />
-            </div>
+          <div className="space-y-8">
+            {education.map((item, index) => (
+              <motion.div
+                key={`${item.university}-${item.department}`}
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.15 }}
+                className="relative pl-16"
+              >
+                <div className="absolute left-0 top-1 flex h-12 w-12 items-center justify-center rounded-full border border-purple-400/30 bg-purple-500/10">
+                  <GraduationCap className="h-6 w-6 text-purple-400" />
+                </div>
 
-            <div className="rounded-3xl border border-white/10 bg-white/[0.04] p-7 backdrop-blur-xl transition hover:border-purple-400/30 hover:bg-white/[0.07]">
-              <div className="flex flex-wrap items-center gap-3">
-                <span className="rounded-full bg-purple-500/10 px-3 py-1 text-xs font-semibold text-purple-300">
-                  {education.year}
-                </span>
+                <div className="rounded-3xl border border-white/10 bg-white/[0.04] p-7 backdrop-blur-xl transition hover:border-purple-400/30 hover:bg-white/[0.07]">
+                  <div className="flex flex-wrap items-center gap-3">
+                    <span className="rounded-full bg-purple-500/10 px-3 py-1 text-xs font-semibold text-purple-300">
+                      {item.year}
+                    </span>
 
-                <span className="flex items-center gap-1 text-sm text-slate-500">
-                  <Calendar className="h-4 w-4" />
-                  Expected {education.expectedGraduation}
-                </span>
-              </div>
+                    <span className="flex items-center gap-1 text-sm text-slate-500">
+                      <Calendar className="h-4 w-4" />
+                      {item.expectedGraduation === "In Progress"
+                        ? "Currently Studying"
+                        : `Expected ${item.expectedGraduation}`}
+                    </span>
+                  </div>
 
-              <h3 className="mt-4 text-2xl font-bold text-white">
-                {education.department}
-              </h3>
+                  <h3 className="mt-4 text-2xl font-bold text-white">
+                    {item.department}
+                  </h3>
 
-              <p className="mt-2 text-lg text-blue-300">
-                {education.university}
-              </p>
+                  <p className="mt-2 text-lg text-blue-300">
+                    {item.university}
+                  </p>
 
-              <div className="mt-4 flex items-center gap-2 text-sm text-slate-400">
-                <MapPin className="h-4 w-4" />
-                {education.location}
-              </div>
-            </div>
+                  <div className="mt-4 flex items-center gap-2 text-sm text-slate-400">
+                    <MapPin className="h-4 w-4" />
+                    {item.location}
+                  </div>
+                </div>
+              </motion.div>
+            ))}
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

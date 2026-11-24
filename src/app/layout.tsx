@@ -5,7 +5,7 @@ import Providers from "./providers";
 export const metadata: Metadata = {
   title: "Gibeamanuel Hibstu | Software Engineering & Management Student",
   description:
-    "Gibeamanuel Hibstu is a 4th-year Software Engineering student at Woldia University and a 4th-year Management student at Adago College, focused on full-stack development, modern web applications, and practical digital solutions.",
+    "Gibeamanuel Hibstu is a 4th-year Software Engineering student at Woldia University and a 4th-year student at Encodo College, Faculty of Business and Management, focused on full-stack development, modern web applications, and practical digital solutions.",
   keywords: [
     "Gibeamanuel Hibstu",
     "Software Engineering Student",
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     "Full-Stack Developer",
     "Software Engineer",
     "Woldia University",
-    "Adago College",
+    "Encodo College",
     "React",
     "Next.js",
     "TypeScript",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Gibeamanuel Hibstu | Software Engineering & Management Student",
     description:
-      "4th-year Software Engineering student at Woldia University and 4th-year Management student at Adago College | Full-Stack Developer.",
+      "4th-year Software Engineering student at Woldia University and 4th-year student at Encodo College, Faculty of Business and Management | Full-Stack Developer.",
     url: "https://amanuel212121.github.io/my-portfolio/",
     siteName: "Gibeamanuel Hibstu Portfolio",
     type: "website",

@@ -3,14 +3,14 @@ export const education = [
     university: "Woldia University",
     department: "Software Engineering",
     year: "4th Year",
-    expectedGraduation: "2028 G.C.",
+    expectedGraduation: "2029 G.C.",
     location: "Ethiopia",
   },
   {
-    university: "Adago College",
-    department: "Management",
+    university: "Encodo College",
+    department: "Faculty of Business and Management",
     year: "4th Year",
-    expectedGraduation: "In Progress",
+    expectedGraduation: "2029 G.C.",
     location: "Ethiopia",
   },
 ];

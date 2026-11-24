@@ -6,10 +6,10 @@ export const profile = {
   university: "Woldia University",
   department: "Software Engineering",
   year: "4th Year",
-  graduation: "2028 G.C.",
+  graduation: "2029 G.C.",
 
-  managementCollege: "Adago College",
-  managementDepartment: "Management",
+  managementCollege: "Encodo College",
+  managementDepartment: "Faculty of Business and Management",
   managementYear: "4th Year",
 
   tagline:
@@ -18,7 +18,7 @@ export const profile = {
   careerGoal: "Full-Stack Software Developer",
 
   about:
-    "I am a 4th-year Software Engineering student at Woldia University and a 4th-year Management student at Adago College. I am passionate about building modern, scalable, secure, and user-friendly web applications while developing strong problem-solving, leadership, and organizational skills.",
+    "I am a 4th-year Software Engineering student at Woldia University and a 4th-year student at Encodo College, Faculty of Business and Management. I am passionate about building modern, scalable, secure, and user-friendly web applications while developing strong problem-solving, leadership, and organizational skills.",
 
   github: "https://github.com/amanuel212121",
   email: "amanuelhibstu@gmail.com",

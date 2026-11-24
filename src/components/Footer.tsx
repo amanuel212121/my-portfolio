@@ -39,8 +39,8 @@ export default function Footer() {
               Woldia University (Jul 2029) • Encodo College (Jul 2027)
             </p>
 
-            <p className="mt-2 text-sm text-slate-500">
-              {profile.location}
+            <p className="mt-2 text-xs text-slate-400">
+              Studying in Woldia City, North Wello • Born in Bahir Dar, Ethiopia
             </p>
           </div>
 

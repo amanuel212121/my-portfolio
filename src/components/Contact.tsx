@@ -115,7 +115,7 @@ export default function Contact() {
               </div>
               <div className="min-w-0">
                 <p className="text-xs uppercase tracking-wider text-slate-500">Location</p>
-                <p className="truncate text-xs font-semibold text-white">Woldia, Ethiopia</p>
+                <p className="truncate text-xs font-semibold text-white">Woldia (Origin: Bahir Dar)</p>
               </div>
             </div>
           </div>

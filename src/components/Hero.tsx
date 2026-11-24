@@ -187,15 +187,20 @@ export default function Hero() {
             {profile.tagline}
           </motion.p>
 
-          {/* Location */}
+          {/* Location & Origin */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.45 }}
-            className="mt-6 flex items-center gap-2 text-sm text-slate-400"
+            className="mt-6 flex flex-wrap items-center gap-3 text-xs sm:text-sm text-slate-400"
           >
-            <MapPin className="h-4 w-4 text-purple-400" />
-            <span>{profile.location}</span>
+            <div className="flex items-center gap-1.5 rounded-full border border-purple-400/20 bg-purple-500/10 px-3 py-1 text-purple-300">
+              <MapPin className="h-3.5 w-3.5 text-purple-400" />
+              <span>Studying in: <strong className="text-white">Woldia City, North Wello</strong></span>
+            </div>
+            <div className="flex items-center gap-1.5 rounded-full border border-blue-400/20 bg-blue-500/10 px-3 py-1 text-blue-300">
+              <span>Birthplace: <strong className="text-white">Bahir Dar, Ethiopia</strong></span>
+            </div>
           </motion.div>
 
           {/* Action Buttons */}

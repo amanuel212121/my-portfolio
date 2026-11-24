@@ -2,6 +2,8 @@ export const profile = {
   name: "Gibeamanuel Hibstu",
   title: "Software Engineering & Management Student | Full-Stack Developer",
   location: "Woldia City, North Wello, Ethiopia",
+  birthPlace: "Bahir Dar, Ethiopia",
+  currentEducationLocation: "Woldia City, North Wello, Ethiopia",
 
   university: "Woldia University",
   department: "Software Engineering",
@@ -19,7 +21,7 @@ export const profile = {
   careerGoal: "Full-Stack Software Developer",
 
   about:
-    "I am a 4th-year Software Engineering student at Woldia University (Expected Jul 2029) and a 4th-year student at Encodo College, Faculty of Business and Management (Expected Jul 2027). I am passionate about building modern, scalable, secure, and user-friendly web applications while developing strong problem-solving, leadership, and organizational skills.",
+    "Originally born in Bahir Dar, Ethiopia, I am currently studying in Woldia City, North Wello, pursuing dual degrees: 4th-year Software Engineering at Woldia University (Expected Jul 2029) and 4th-year Management at Encodo College, Faculty of Business and Management (Expected Jul 2027). I am passionate about building modern, scalable, secure, and user-friendly web applications while developing strong problem-solving, leadership, and organizational skills.",
 
   github: "https://github.com/amanuel212121",
   email: "amanuelhibstu@gmail.com",

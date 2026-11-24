@@ -122,11 +122,23 @@ export default function About() {
                 </div>
               </div>
 
+              {/* Origin & Study Badges */}
+              <div className="mb-6 flex flex-wrap gap-2.5">
+                <span className="inline-flex items-center gap-1.5 rounded-full border border-blue-400/20 bg-blue-500/10 px-3.5 py-1 text-xs font-semibold text-blue-300">
+                  <span className="h-1.5 w-1.5 rounded-full bg-blue-400" />
+                  Birthplace: <strong className="text-white">Bahir Dar, Ethiopia</strong>
+                </span>
+                <span className="inline-flex items-center gap-1.5 rounded-full border border-purple-400/20 bg-purple-500/10 px-3.5 py-1 text-xs font-semibold text-purple-300">
+                  <span className="h-1.5 w-1.5 rounded-full bg-purple-400" />
+                  Studying in: <strong className="text-white">Woldia City, North Wello</strong>
+                </span>
+              </div>
+
               <div className="space-y-5 text-base leading-8 text-slate-300">
                 <p>
-                  I am a passionate{" "}
+                  Originally born in <span className="font-semibold text-white">Bahir Dar, Ethiopia</span> and currently pursuing my higher education in <span className="font-semibold text-white">Woldia City, North Wello</span>, I am a passionate{" "}
                   <span className="font-semibold text-white">
-                    Software Engineering & Management Student
+                    Software Engineering &amp; Management Student
                   </span>{" "}
                   and aspiring Full-Stack Developer focused on building
                   modern, scalable, secure, and user-friendly web applications.

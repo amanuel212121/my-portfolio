@@ -12,67 +12,97 @@ export interface Project {
 export const projects: Project[] = [
   {
     title: "Student Management System",
-    description: "A modern student management system for managing student information, grades, course enrollments, and academic records.",
+    description: "A comprehensive student information system for tracking student records, courses, grades, attendance, and fee payments.",
     category: "Full-Stack",
     technologies: ["React", "Laravel", "MySQL", "Tailwind CSS"],
     github: "https://github.com/amanuel212121",
     demo: "#",
     frontendFeatures: [
-      "Interactive Student & Faculty Dashboard",
-      "Dynamic Grade & Attendance Tables with Search/Filters",
-      "Student Registration & Profile Management UI",
-      "Responsive Layout with Real-Time Validation"
+      "Student & Faculty Portal with Role-Based Access",
+      "Real-Time Grade Calculation & Transcripts Generator",
+      "Course Registration & Class Schedule Grid View",
+      "Automated Student Attendance & Report Tracker"
     ],
     previewAccent: "from-blue-600 to-indigo-600"
   },
   {
     title: "Library Management System",
-    description: "A digital library system for managing book catalogs, member borrowing history, and automated return tracking.",
+    description: "A digital library platform facilitating book inventory, catalog searches, member borrowings, and fine calculations.",
     category: "Full-Stack",
     technologies: ["React", "Laravel", "MySQL", "Tailwind CSS"],
     github: "https://github.com/amanuel212121",
     demo: "#",
     frontendFeatures: [
-      "Book Search Catalog with Live Filter & Category Cards",
-      "Member Borrowing & Due Date Tracker UI",
-      "Admin Inventory & Book Issuing Panels",
-      "Clean Dashboard with Statistics & Analytics"
+      "Dynamic Book Catalog Search with Live Filters",
+      "Borrowing History & Automated Due-Date Notification",
+      "Librarian Dashboard with Barcode / Book ID Scanner",
+      "Inventory Statistics & Overdue Penalty Calculator"
     ],
     previewAccent: "from-purple-600 to-pink-600"
   },
   {
-    title: "Hotel Management System",
-    description: "A comprehensive hotel management application handling room reservations, customer check-ins/check-outs, and billing.",
+    title: "Hotel Management & Booking System",
+    description: "An end-to-end hotel operations application handling room bookings, guest check-ins, housekeeping, and billing invoices.",
     category: "Full-Stack",
     technologies: ["React", "Laravel", "MySQL", "Bootstrap"],
     github: "https://github.com/amanuel212121",
     demo: "#",
     frontendFeatures: [
-      "Room Booking Calendar & Real-Time Availability Grid",
-      "Guest Check-in / Check-out Workflow Interface",
-      "Billing, Invoice Generation, and Payment Status Views",
-      "Interactive Room Cards with Amenities & Rates"
+      "Interactive Room Availability Calendar & Floor Map",
+      "Seamless Guest Check-in / Checkout Workflow",
+      "Automated Billing, Invoicing & Payment Tracker",
+      "Staff Housekeeping & Maintenance Management"
     ],
     previewAccent: "from-emerald-600 to-teal-600"
   },
   {
-    title: "Document Authentication System",
-    description: "A secure web application for digital document verification, authenticity checks, and cryptographic validation.",
+    title: "Document Authentication & Verification System",
+    description: "A secure digital verification portal for cryptographic authentication of academic degrees, certificates, and official documents.",
     category: "Web Application",
     technologies: ["React", "Laravel", "MySQL", "Tailwind CSS"],
     github: "https://github.com/amanuel212121",
     demo: "#",
     frontendFeatures: [
       "Drag-and-Drop Document Verification Upload Zone",
-      "Instant Verification Status & Authenticity Badge",
-      "QR Code / Digital Signature Scanner Interface",
-      "Audit Trail & Verification History View"
+      "Instant Authenticity Badge & Tamper-Detection Status",
+      "QR Code Verification & Hash Validation Viewer",
+      "Audit Log of Verifications & Institutional Signatures"
     ],
     previewAccent: "from-amber-500 to-orange-600"
   },
   {
+    title: "Hospital & Healthcare Management System",
+    description: "A healthcare portal designed to manage outpatient appointments, electronic medical records (EMR), doctor schedules, and pharmacy prescriptions.",
+    category: "Full-Stack",
+    technologies: ["React", "Laravel", "MySQL", "Tailwind CSS"],
+    github: "https://github.com/amanuel212121",
+    demo: "#",
+    frontendFeatures: [
+      "Patient Appointment Booking & Queue Status Board",
+      "Doctor Diagnostic Notes & Electronic Health Records UI",
+      "Pharmacy Medication Prescriptions & Stock Tracker",
+      "Emergency Ward Bed Allocation & Triage View"
+    ],
+    previewAccent: "from-rose-500 to-red-600"
+  },
+  {
+    title: "Business Financial & KPI Analytics Dashboard",
+    description: "An executive business intelligence dashboard bridging software engineering and management to track revenue, expenses, and employee performance.",
+    category: "Management & BI",
+    technologies: ["React", "TypeScript", "Tailwind CSS", "Recharts"],
+    github: "https://github.com/amanuel212121",
+    demo: "#",
+    frontendFeatures: [
+      "Executive KPI Cards: Revenue, Gross Margin & Profit",
+      "Interactive Monthly Cashflow & Expenditure Charts",
+      "Department Budget Allocation & Variance Reports",
+      "Strategic Performance Indicators & Target Goal Tracking"
+    ],
+    previewAccent: "from-violet-600 to-indigo-700"
+  },
+  {
     title: "Personal Portfolio",
-    description: "A sleek, responsive developer portfolio showcasing projects, technical skills, and achievements.",
+    description: "A modern developer portfolio showcasing projects, technical skills, academic certificates, and business management background.",
     category: "Frontend",
     technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Framer Motion"],
     github: "https://github.com/amanuel212121/my-portfolio",

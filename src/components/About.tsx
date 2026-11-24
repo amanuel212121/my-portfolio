@@ -19,7 +19,7 @@ const stats = [
     icon: GraduationCap,
   },
   {
-    value: "2029",
+    value: "Jul 2029",
     label: "Expected Graduation",
     icon: Code2,
   },

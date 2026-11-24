@@ -91,7 +91,7 @@ export default function Management() {
               <div>
                 <h3 className="text-2xl font-bold text-white">About Me in Management</h3>
                 <p className="text-xs uppercase tracking-wider text-slate-400">
-                  Encodo College • Faculty of Business and Management
+                  Encodo College • Faculty of Business and Management • Expected Jul 2027
                 </p>
               </div>
             </div>

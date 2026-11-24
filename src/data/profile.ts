@@ -6,11 +6,12 @@ export const profile = {
   university: "Woldia University",
   department: "Software Engineering",
   year: "4th Year",
-  graduation: "2029 G.C.",
+  graduation: "Jul 2029 G.C.",
 
   managementCollege: "Encodo College",
   managementDepartment: "Faculty of Business and Management",
   managementYear: "4th Year",
+  managementGraduation: "Jul 2027 G.C.",
 
   tagline:
     "Building modern web applications with clean code, creativity, and practical problem-solving.",
@@ -18,7 +19,7 @@ export const profile = {
   careerGoal: "Full-Stack Software Developer",
 
   about:
-    "I am a 4th-year Software Engineering student at Woldia University and a 4th-year student at Encodo College, Faculty of Business and Management. I am passionate about building modern, scalable, secure, and user-friendly web applications while developing strong problem-solving, leadership, and organizational skills.",
+    "I am a 4th-year Software Engineering student at Woldia University (Expected Jul 2029) and a 4th-year student at Encodo College, Faculty of Business and Management (Expected Jul 2027). I am passionate about building modern, scalable, secure, and user-friendly web applications while developing strong problem-solving, leadership, and organizational skills.",
 
   github: "https://github.com/amanuel212121",
   email: "amanuelhibstu@gmail.com",

@@ -25,6 +25,12 @@ export const metadata: Metadata = {
   authors: [{ name: "Gibeamanuel Hibstu" }],
   creator: "Gibeamanuel Hibstu",
   metadataBase: new URL("https://amanuel212121.github.io"),
+  manifest: "/my-portfolio/manifest.json",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "black-translucent",
+    title: "GH Portfolio",
+  },
   alternates: {
     canonical: "/my-portfolio/",
   },

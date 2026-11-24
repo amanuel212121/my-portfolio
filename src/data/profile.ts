@@ -1,7 +1,7 @@
 export const profile = {
   name: "Gibeamanuel Hibstu",
   title: "Software Engineering & Management Student | Full-Stack Developer",
-  location: "Bahir Dar, Ethiopia",
+  location: "Woldia City, North Wello, Ethiopia",
 
   university: "Woldia University",
   department: "Software Engineering",

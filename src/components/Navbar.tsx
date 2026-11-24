@@ -174,8 +174,8 @@ export default function Navbar() {
         <div className="flex items-center gap-2">
           {/* CV */}
           <a
-            href="/cv.pdf"
-            download
+            href="/my-portfolio/Gibeamanuel_Hibstu_CV_Updated.pdf"
+            download="Gibeamanuel_Hibstu_CV.pdf"
             className="hidden items-center gap-2 rounded-xl border border-white/10 bg-white/[0.04] px-3.5 py-2 text-xs font-semibold text-slate-200 backdrop-blur-xl transition hover:border-purple-400/20 hover:bg-purple-500/10 hover:text-white lg:inline-flex"
           >
             <Download className="h-3.5 w-3.5" />
@@ -267,8 +267,8 @@ export default function Navbar() {
               })}
 
               <a
-                href="/cv.pdf"
-                download
+                href="/my-portfolio/Gibeamanuel_Hibstu_CV_Updated.pdf"
+                download="Gibeamanuel_Hibstu_CV.pdf"
                 onClick={closeMenu}
                 className="mt-2 flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-blue-600 via-purple-600 to-fuchsia-600 px-4 py-3 text-sm font-semibold text-white"
               >

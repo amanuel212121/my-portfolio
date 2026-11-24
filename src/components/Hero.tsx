@@ -1,7 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import { useEffect, useState } from "react";
 import {
   ArrowDown,
   ArrowRight,
@@ -21,14 +22,23 @@ function InstagramIcon({ className = "h-4 w-4" }: { className?: string }) {
     </svg>
   );
 }
+
+function GithubIcon({ className = "h-4 w-4" }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor">
+      <path fillRule="evenodd" clipRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+    </svg>
+  );
+}
+
 import Link from "next/link";
 import { profile } from "@/data/profile";
 
 const roles = [
   "Software Engineering & Management Student",
-  "Full-Stack Developer",
-  "Problem Solver",
-  "Web Application Developer",
+  "Full-Stack Web Developer",
+  "Management Graduate | Aspiring Entrepreneur",
+  "Problem Solver & System Architect",
 ];
 
 const particles = [
@@ -43,6 +53,15 @@ const particles = [
 ];
 
 export default function Hero() {
+  const [roleIndex, setRoleIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setRoleIndex((prev) => (prev + 1) % roles.length);
+    }, 3800);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section
       id="home"
@@ -117,7 +136,7 @@ export default function Hero() {
               <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-400" />
             </span>
 
-            Available for opportunities
+            Available for Opportunities &amp; Projects
           </motion.div>
 
           {/* Heading */}
@@ -133,26 +152,27 @@ export default function Hero() {
             </span>
           </motion.h1>
 
-          {/* Role */}
+          {/* Dynamic Cycling Role */}
           <motion.div
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.25 }}
-            className="mt-6 min-h-[42px] text-xl font-semibold text-slate-200 sm:text-2xl"
+            className="mt-6 flex min-h-[46px] items-center text-xl font-semibold text-slate-200 sm:text-2xl"
           >
             <span className="mr-2 text-purple-400">&gt;</span>
 
-            <motion.span
-              animate={{ opacity: [0.4, 1, 0.4] }}
-              transition={{
-                duration: 3,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-              className="bg-gradient-to-r from-cyan-300 via-blue-400 to-purple-400 bg-clip-text text-transparent"
-            >
-              {roles[0]}
-            </motion.span>
+            <AnimatePresence mode="wait">
+              <motion.span
+                key={roleIndex}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.35 }}
+                className="bg-gradient-to-r from-cyan-300 via-blue-400 to-purple-400 bg-clip-text text-transparent"
+              >
+                {roles[roleIndex]}
+              </motion.span>
+            </AnimatePresence>
 
             <span className="ml-1 animate-pulse text-purple-400">_</span>
           </motion.div>
@@ -178,7 +198,7 @@ export default function Hero() {
             <span>{profile.location}</span>
           </motion.div>
 
-          {/* Buttons */}
+          {/* Action Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
@@ -192,7 +212,6 @@ export default function Hero() {
               className="group inline-flex items-center gap-2 rounded-2xl bg-gradient-to-r from-blue-600 via-purple-600 to-fuchsia-600 px-6 py-3.5 font-semibold text-white shadow-xl shadow-purple-600/20 transition duration-300 hover:-translate-y-1 hover:shadow-purple-500/40"
             >
               View Projects
-
               <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
             </Link>
 
@@ -203,7 +222,6 @@ export default function Hero() {
               className="group inline-flex items-center gap-2 rounded-2xl border border-white/10 bg-white/[0.05] px-6 py-3.5 font-semibold text-white backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:bg-white/10"
             >
               Download CV
-
               <Download className="h-5 w-5 transition-transform duration-300 group-hover:translate-y-1" />
             </a>
 
@@ -214,7 +232,7 @@ export default function Hero() {
               rel="noopener noreferrer"
               className="group inline-flex items-center gap-2 rounded-2xl border border-white/10 bg-white/[0.05] px-6 py-3.5 font-semibold text-white backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:bg-white/10"
             >
-              <span className="text-lg">⌘</span>
+              <GithubIcon className="h-5 w-5" />
               GitHub
             </a>
           </motion.div>
@@ -279,21 +297,20 @@ export default function Hero() {
             className="mt-14 inline-flex items-center gap-2 text-sm text-slate-500 transition hover:text-white"
           >
             Scroll to explore
-
             <ArrowDown className="h-4 w-4" />
           </motion.a>
         </div>
 
-        {/* RIGHT SIDE - PROFILE IMAGE */}
+        {/* RIGHT SIDE - PROFILE IMAGE (Fixed upright photo with rotating ambient border) */}
         <motion.div
           initial={{ opacity: 0, scale: 0.85, x: 40 }}
           animate={{ opacity: 1, scale: 1, x: 0 }}
           transition={{ duration: 1, delay: 0.25 }}
           className="relative mx-auto w-full max-w-md"
         >
-          {/* Glow */}
+          {/* Ambient Glow */}
           <motion.div
-            className="absolute inset-8 rounded-full bg-gradient-to-r from-blue-500/30 via-purple-500/30 to-fuchsia-500/30 blur-3xl"
+            className="absolute inset-4 rounded-full bg-gradient-to-r from-blue-500/30 via-purple-500/30 to-fuchsia-500/30 blur-3xl"
             animate={{
               scale: [1, 1.08, 1],
               opacity: [0.5, 0.8, 0.5],
@@ -305,36 +322,40 @@ export default function Hero() {
             }}
           />
 
-          {/* Ring */}
-          <motion.div
-            className="relative mx-auto flex aspect-square w-[280px] items-center justify-center rounded-full border border-white/10 bg-white/[0.03] p-3 shadow-2xl shadow-purple-950/40 backdrop-blur-xl sm:w-[340px]"
-            animate={{ rotate: [0, 360] }}
-            transition={{
-              duration: 30,
-              repeat: Infinity,
-              ease: "linear",
-            }}
-          >
-            <div className="absolute inset-2 rounded-full border border-dashed border-purple-400/20" />
+          {/* Outer Frame with Rotating Decorative Ring */}
+          <div className="relative mx-auto flex aspect-square w-[280px] items-center justify-center sm:w-[340px]">
+            {/* Spinning decorative ring (ONLY the ring rotates, photo stays upright!) */}
+            <motion.div
+              className="absolute inset-0 rounded-full border border-dashed border-purple-400/30"
+              animate={{ rotate: [0, 360] }}
+              transition={{
+                duration: 28,
+                repeat: Infinity,
+                ease: "linear",
+              }}
+            />
 
-            {/* Profile Image */}
-            <div className="relative h-full w-full overflow-hidden rounded-full border-2 border-purple-400/30 bg-slate-900">
+            {/* Glowing accent halo */}
+            <div className="absolute inset-2 rounded-full border border-white/10 bg-white/[0.03] shadow-2xl shadow-purple-950/40 backdrop-blur-xl" />
+
+            {/* Profile Image - STABLE & UPRIGHT */}
+            <div className="relative h-[88%] w-[88%] overflow-hidden rounded-full border-2 border-purple-400/40 bg-slate-900 shadow-inner">
               <Image
                 src="/my-portfolio/profile.jpg"
                 alt="Gibeamanuel Hibstu"
                 fill
                 priority
                 sizes="(max-width: 640px) 280px, 340px"
-                className="object-cover"
+                className="object-cover object-top"
               />
 
-              <div className="pointer-events-none absolute inset-0 rounded-full bg-gradient-to-t from-purple-950/30 via-transparent to-blue-500/10" />
+              <div className="pointer-events-none absolute inset-0 rounded-full bg-gradient-to-t from-purple-950/20 via-transparent to-blue-500/5" />
             </div>
-          </motion.div>
+          </div>
 
-          {/* Quote */}
+          {/* Floating Badge / Quote */}
           <motion.div
-            className="absolute -bottom-3 left-1/2 -translate-x-1/2 rounded-2xl border border-white/10 bg-slate-950/70 px-5 py-3 shadow-xl backdrop-blur-xl"
+            className="absolute -bottom-3 left-1/2 -translate-x-1/2 rounded-2xl border border-white/10 bg-slate-950/80 px-5 py-3 shadow-xl backdrop-blur-xl text-center"
             animate={{ y: [0, -8, 0] }}
             transition={{
               duration: 3,
@@ -345,8 +366,7 @@ export default function Hero() {
             <p className="whitespace-nowrap text-sm font-semibold text-white">
               Problem-solvers by nature
             </p>
-
-            <p className="text-center text-xs text-purple-300">
+            <p className="whitespace-nowrap text-xs text-purple-300">
               developers by choice
             </p>
           </motion.div>

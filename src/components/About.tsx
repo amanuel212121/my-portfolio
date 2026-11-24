@@ -14,23 +14,23 @@ import {
 
 const stats = [
   {
-    value: '4th',
-    label: "Year Student",
+    value: "Dual Major",
+    label: "Software & Management",
     icon: GraduationCap,
   },
   {
-    value: "Jul 2029",
-    label: "Expected Graduation",
+    value: "7+",
+    label: "Featured Projects",
     icon: Code2,
   },
   {
-    value: "Full-Stack",
-    label: "Developer",
+    value: "18+",
+    label: "Technologies Mastered",
     icon: Sparkles,
   },
   {
-    value: "AI",
-    label: "Area of Interest",
+    value: "Full-Stack & AI",
+    label: "Areas of Focus",
     icon: Brain,
   },
 ];
@@ -117,7 +117,7 @@ export default function About() {
                   </p>
 
                   <h3 className="mt-1 text-xl font-bold text-white sm:text-2xl">
-                    Software Engineering Student
+                    Software Engineering &amp; Management Scholar
                   </h3>
                 </div>
               </div>

@@ -24,6 +24,7 @@ export const profile = {
   email: "amanuelhibstu@gmail.com",
   phone: "+251918610363",
   telegram: "https://t.me/Amanuel_Software",
+  instagram: "https://instagram.com/amanuel_hibstu",
 
   quote: "Code with purpose. Build with passion.",
 };

@@ -7,7 +7,20 @@ import {
   ArrowRight,
   Download,
   MapPin,
+  Mail,
+  Phone,
+  Send,
 } from "lucide-react";
+
+function InstagramIcon({ className = "h-4 w-4" }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+      <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+    </svg>
+  );
+}
 import Link from "next/link";
 import { profile } from "@/data/profile";
 
@@ -203,6 +216,54 @@ export default function Hero() {
             >
               <span className="text-lg">⌘</span>
               GitHub
+            </a>
+          </motion.div>
+
+          {/* Direct Contact & Social Buttons (Telegram, Instagram, Email, Call) */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="mt-5 flex flex-wrap items-center gap-3"
+          >
+            {/* Telegram */}
+            <a
+              href={profile.telegram}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-2xl border border-sky-400/20 bg-sky-500/10 px-4 py-2.5 text-xs font-semibold text-sky-300 backdrop-blur-xl transition duration-300 hover:-translate-y-0.5 hover:border-sky-400/40 hover:bg-sky-500/20 hover:text-white"
+            >
+              <Send className="h-4 w-4 text-sky-400" />
+              Telegram
+            </a>
+
+            {/* Instagram */}
+            <a
+              href={profile.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-2xl border border-pink-400/20 bg-pink-500/10 px-4 py-2.5 text-xs font-semibold text-pink-300 backdrop-blur-xl transition duration-300 hover:-translate-y-0.5 hover:border-pink-400/40 hover:bg-pink-500/20 hover:text-white"
+            >
+              <InstagramIcon className="h-4 w-4 text-pink-400" />
+              Instagram
+            </a>
+
+            {/* Email */}
+            <a
+              href={`mailto:${profile.email}`}
+              className="inline-flex items-center gap-2 rounded-2xl border border-purple-400/20 bg-purple-500/10 px-4 py-2.5 text-xs font-semibold text-purple-300 backdrop-blur-xl transition duration-300 hover:-translate-y-0.5 hover:border-purple-400/40 hover:bg-purple-500/20 hover:text-white"
+            >
+              <Mail className="h-4 w-4 text-purple-400" />
+              Email
+            </a>
+
+            {/* Call */}
+            <a
+              href={`tel:${profile.phone}`}
+              className="inline-flex items-center gap-2 rounded-2xl border border-emerald-400/20 bg-emerald-500/10 px-4 py-2.5 text-xs font-semibold text-emerald-300 backdrop-blur-xl transition duration-300 hover:-translate-y-0.5 hover:border-emerald-400/40 hover:bg-emerald-500/20 hover:text-white"
+            >
+              <Phone className="h-4 w-4 text-emerald-400" />
+              Call Me
             </a>
           </motion.div>
 
